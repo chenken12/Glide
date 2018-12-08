@@ -4,7 +4,7 @@
 
 Glide is an Image Loader. It can be used to load any type of images (png, jpg, etc) and it can also use gif. It's mostly use inside android application. It is fast and easy to use. It can have extra placeholder image so to have an image in place when it fetching from the urls. There a error image so if the url is dead it will use that image instead. Glide also have build in crop, resizing the image and alot of other little effects.
 
-## Code Example
+## Installation
 
 ### Setup
 
@@ -84,19 +84,21 @@ Glide exist because it makes grabbing images from a url fast and easy to use. Th
 Glide developed by bumptech.
 It is a library that recommended by Google
 
-## Installation
+## Code Example
 
-Provide code examples and explanations of how to get the project.
+[Code here](https://github.com/chenken12/Glide/tree/master/AndroidGlide).
 
 
 ## Tests
 
 This is the url link to the image I used
 https://cdn.saultonline.com/wp-content/uploads/2017/01/humber.jpg
+
 <img src="https://raw.githubusercontent.com/chenken12/Glide/master/Images/working_link.PNG">
 when the link is working
 
 when I broken url link https://cdn.se.com/wp-content/uds/2017/01/humber.jpg
+
 <img src="https://raw.githubusercontent.com/chenken12/Glide/master/Images/broken_link.PNG">
 
 ## References
