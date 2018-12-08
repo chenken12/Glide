@@ -10,7 +10,7 @@ Glide is an Image Loader. It can be used to load any type of images (png, jpg, e
 
 Create a new project or an emptyActivity in Android Studio
 
-Add to your ```app/build.gradle``` file:
+Add to your `app/build.gradle` file and sync:
 ```
 dependencies {
     implementation 'com.github.bumptech.glide:glide:4.7.1'
@@ -18,9 +18,30 @@ dependencies {
 }
 ```
 
-Next inside 
+Next inside your `AndroidManifest.xml` file add this line single:
+```
+<uses-permission android:name="android.permission.INTERNET" />
+```
 
-Basic Setup, can only load image from url
+### Basic Setup, can only load image from url
+Then inside `activity_main.xml` or the the page you want, add a ImageView:
+```
+<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:id="@+id/img1"/>
+```
+
+Finally inside the `MainActivity.java` file import glide and add the code to onCreate:
+```
+import com.bumptech.glide.Glide;
+```
+```
+ImageView img = (ImageView) findViewById(R.id.img1);
+String urls = "https://cdn.saultonline.com/wp-content/uploads/2017/01/humber.jpg";
+Glide.with(this).load(urls).into(img);
+```
 
 ## Motivation
 
