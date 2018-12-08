@@ -1,4 +1,4 @@
-# Glide
+# Glide, Assignment #3
 
 ## Synopsis
 
@@ -33,7 +33,7 @@ Then inside `activity_main.xml` or the the page you want, add a ImageView:
         android:id="@+id/img1"/>
 ```
 
-Finally inside the `MainActivity.java` file import glide and add the code to onCreate:
+Finally inside the `MainActivity.java` file :
 ```
 import com.bumptech.glide.Glide;
 ```
@@ -42,25 +42,54 @@ ImageView img = (ImageView) findViewById(R.id.img1);
 String urls = "https://cdn.saultonline.com/wp-content/uploads/2017/01/humber.jpg";
 Glide.with(this).load(urls).into(img);
 ```
+import glide and add the code to onCreate. Replace to string with the url for your choice. This currenttly only loads a url from the web and nothing else.
+
+### Advanced Setup
+If you want more customization for example, resize, crop and etc. This use `GlideApp` and not `Glide`
+
+First create a new java class called `MyAppGlide.java` and inside we will put:
+```
+import com.bumptech.glide.annotation.GlideModule;
+import com.bumptech.glide.module.AppGlideModule;
+
+@GlideModule
+public class MyAppGlide extends AppGlideModule {
+    // leave empty
+}
+```
+
+Now you can replace `Glide` with `GlideApp`.
+To crop and/or resize an image:
+```
+GlideApp.with(this)
+    .load(urls)
+    .override(800, 600)
+    .centerCrop()
+    .into(img);
+```
+Adding a error image and/or placeholder image:
+```
+GlideApp.with(this)
+    .load(urls)
+    .placeholder(R.drawable.placeholder)
+    .error(R.drawable.error404)
+    .into(img);
+```
+For when url image didn't load yet and when url fail to get image
+
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+Glide exist because it makes grabbing images from a url fast and easy to use.
+Glide developed by bumptech and is a library that is recommended by Google
 
 ## Installation
 
 Provide code examples and explanations of how to get the project.
 
-## API Reference
-
-Depending on the size of the project, if it is small and simple enough the reference docs can be added to the README. For medium size to larger projects it is important to at least provide a link to where the API reference docs live.
 
 ## Tests
 
 Describe and show how to run the tests with code examples.
 
-## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
-
-## License
