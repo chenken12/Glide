@@ -93,10 +93,11 @@ Provide code examples and explanations of how to get the project.
 
 This is the url link to the image I used
 https://cdn.saultonline.com/wp-content/uploads/2017/01/humber.jpg
-
+<img src="https://raw.githubusercontent.com/chenken12/Glide/master/Images/working_link.PNG">
 when the link is working
 
 when I broken url link https://cdn.se.com/wp-content/uds/2017/01/humber.jpg
+<img src="https://raw.githubusercontent.com/chenken12/Glide/master/Images/broken_link.PNG">
 
 ## References
 * https://github.com/bumptech/glide
