@@ -2,7 +2,7 @@
 
 ## Synopsis
 
-Glide is an Image Loader. It can be used to load any type of images (png, jpg, etc). It's mostly use inside android application. It is fast and easy to use. It can have extra placeholder image so to have an image in place when it fetching from the urls. There a error image so if the url is dead it will use that image instead. Glide also have build in crop, resizing the image and alot of other little effects.
+Glide is an Image Loader. It can be used to load any type of images (png, jpg, etc) and it can also use gif. It's mostly use inside android application. It is fast and easy to use. It can have extra placeholder image so to have an image in place when it fetching from the urls. There a error image so if the url is dead it will use that image instead. Glide also have build in crop, resizing the image and alot of other little effects.
 
 ## Code Example
 
@@ -80,8 +80,9 @@ For when url image didn't load yet and when url fail to get image
 
 ## Motivation
 
-Glide exist because it makes grabbing images from a url fast and easy to use.
-Glide developed by bumptech and is a library that is recommended by Google
+Glide exist because it makes grabbing images from a url fast and easy to use. There are time when it better to get a image from an url then to download the image.
+Glide developed by bumptech.
+It is a library that recommended by Google
 
 ## Installation
 
@@ -90,6 +91,18 @@ Provide code examples and explanations of how to get the project.
 
 ## Tests
 
-Describe and show how to run the tests with code examples.
+This is the url link to the image I used
+https://cdn.saultonline.com/wp-content/uploads/2017/01/humber.jpg
+
+when the link is working
+
+when I broken url link https://cdn.se.com/wp-content/uds/2017/01/humber.jpg
+
+## References
+* https://github.com/bumptech/glide
+* https://www.dev2qa.com/android-glide-example/
+* https://github.com/codepath/android_guides/wiki/Displaying-Images-with-the-Glide-Library
+* https://www.youtube.com/watch?v=E0YgCRnK_6c
+* https://www.youtube.com/watch?v=LJw44pBrLGU
 
 
